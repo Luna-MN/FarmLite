@@ -4,9 +4,10 @@
 [ext_resource type="TileSet" uid="uid://caisq2bvgrfs7" path="res://Tiles.tres" id="1_qux4g"]
 [ext_resource type="PackedScene" uid="uid://b5dxprvv4i4jv" path="res://make botton.tscn" id="2_sgalq"]
 
-[node name="Node2D" type="Node2D"]
+[node name="Node2D" type="Node2D" node_paths=PackedStringArray("button")]
 script = ExtResource("1_f6bb0")
 fenceScene = ExtResource("2_sgalq")
+button = [NodePath("Button")]
 
 [node name="TileMap" type="TileMap" parent="."]
 tile_set = ExtResource("1_qux4g")
