@@ -1,10 +1,12 @@
-[gd_scene load_steps=3 format=3 uid="uid://b6jqxlout6a7p"]
+[gd_scene load_steps=4 format=3 uid="uid://b6jqxlout6a7p"]
 
 [ext_resource type="Script" path="res://Main.cs" id="1_f6bb0"]
 [ext_resource type="TileSet" uid="uid://caisq2bvgrfs7" path="res://Tiles.tres" id="1_qux4g"]
+[ext_resource type="PackedScene" uid="uid://e4nflespis52" path="res://AnimalTile.tscn" id="2_fjmm5"]
 
 [node name="Node2D" type="Node2D"]
 script = ExtResource("1_f6bb0")
+fenceScene = ExtResource("2_fjmm5")
 
 [node name="TileMap" type="TileMap" parent="."]
 tile_set = ExtResource("1_qux4g")
