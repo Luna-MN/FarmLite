@@ -11,7 +11,7 @@ public partial class Main : Node2D
 		GD.Print("Button pressed");
 		var aa = fenceScene.Instantiate<Node2D>();
 		GD.Print(aa);
-		aa.Position = GetViewport().GetMousePosition();
+		aa.Position = new Vector2(225, 175);
 		GD.Print(aa.Position);
 		AddChild(aa);
 	}
