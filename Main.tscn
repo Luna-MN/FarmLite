@@ -2,11 +2,11 @@
 
 [ext_resource type="Script" path="res://Main.cs" id="1_f6bb0"]
 [ext_resource type="TileSet" uid="uid://caisq2bvgrfs7" path="res://Tiles.tres" id="1_qux4g"]
-[ext_resource type="PackedScene" uid="uid://e4nflespis52" path="res://AnimalTile.tscn" id="2_fjmm5"]
+[ext_resource type="PackedScene" uid="uid://b5dxprvv4i4jv" path="res://make botton.tscn" id="2_sgalq"]
 
 [node name="Node2D" type="Node2D"]
 script = ExtResource("1_f6bb0")
-fenceScene = ExtResource("2_fjmm5")
+fenceScene = ExtResource("2_sgalq")
 
 [node name="TileMap" type="TileMap" parent="."]
 tile_set = ExtResource("1_qux4g")
