@@ -8,7 +8,7 @@ public partial class Main : Node2D
 	public PackedScene fenceScene;
 	[Export]
 	public Godot.Button[] buttons;
-	private Callable _on_button_pressed()
+	private void _on_button_pressed()
 	{
 		GD.Print("Button pressed");
 		var aa = fenceScene.Instantiate<Node2D>();
@@ -16,7 +16,6 @@ public partial class Main : Node2D
 		aa.Position = new Vector2(225, 175);
 		GD.Print(aa.Position);
 		AddChild(aa);
-		return new Callable();
 	}
 
 	// Called when the node enters the scene tree for the first time.
@@ -24,7 +23,7 @@ public partial class Main : Node2D
 	{
 		foreach (var Button in buttons)
 		{
-			Button.Connect("pressed", _on_button_pressed());
+			Button.Connect("pressed", new Callable(this, nameof(_on_button_pressed)));
 		}
 	}
 
