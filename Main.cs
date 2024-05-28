@@ -21,9 +21,12 @@ public partial class Main : Node2D
 	// Called when the node enters the scene tree for the first time.
 	public override void _Ready()
 	{
-		foreach (var Button in buttons)
+		foreach (var button in buttons)
 		{
-			Button.Connect("pressed", new Callable(this, nameof(_on_button_pressed)));
+			if (!button.IsConnected("pressed", new Callable(this, nameof(_on_button_pressed))))
+			{
+				button.Connect("pressed", new Callable(this, nameof(_on_button_pressed)));
+			}
 		}
 	}
 
