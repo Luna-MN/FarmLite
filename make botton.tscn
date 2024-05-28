@@ -1,31 +1,56 @@
-[gd_scene format=3 uid="uid://b5dxprvv4i4jv"]
+[gd_scene load_steps=5 format=3 uid="uid://b5dxprvv4i4jv"]
 
-[node name="Node2D" type="Node2D"]
+[ext_resource type="Script" path="res://structure_create.cs" id="1_j28gg"]
+[ext_resource type="PackedScene" uid="uid://e4nflespis52" path="res://AnimalTile.tscn" id="2_1exk7"]
+[ext_resource type="PackedScene" uid="uid://bolhxti5prgm7" path="res://Farm.tscn" id="3_0qa5f"]
+[ext_resource type="Script" path="res://ButtonMake.cs" id="4_2wxf4"]
 
-[node name="Button4" type="Button" parent="."]
-offset_left = -50.0
-offset_top = 4.0
-offset_right = -5.0
-offset_bottom = 42.0
-text = "wat"
+[node name="Node2D" type="Node2D" node_paths=PackedStringArray("ani", "dirt", "water", "rec")]
+script = ExtResource("1_j28gg")
+ani = NodePath("Button2")
+dirt = NodePath("Button3")
+water = NodePath("Button4")
+rec = NodePath("Button")
+aniScene = ExtResource("2_1exk7")
+dirtScene = ExtResource("3_0qa5f")
 
-[node name="Button2" type="Button" parent="."]
+[node name="Button2" type="Button" parent="." node_paths=PackedStringArray("SC")]
 offset_left = 5.0
 offset_top = -44.0
 offset_right = 50.0
 offset_bottom = -6.0
 text = "ani"
+script = ExtResource("4_2wxf4")
+SC = NodePath("..")
+metadata/_edit_use_anchors_ = true
 
-[node name="Button3" type="Button" parent="."]
+[node name="Button3" type="Button" parent="." node_paths=PackedStringArray("SC")]
 offset_left = -50.0
 offset_top = -44.0
 offset_right = -5.0
 offset_bottom = -6.0
 text = "dirt"
+script = ExtResource("4_2wxf4")
+SC = NodePath("..")
+metadata/_edit_use_anchors_ = true
 
-[node name="Button" type="Button" parent="."]
+[node name="Button" type="Button" parent="." node_paths=PackedStringArray("SC")]
 offset_left = 5.0
 offset_top = 4.0
 offset_right = 50.0
 offset_bottom = 42.0
-text = "??"
+text = "rec"
+script = ExtResource("4_2wxf4")
+SC = NodePath("..")
+metadata/_edit_use_anchors_ = true
+
+[node name="Button4" type="Button" parent="." node_paths=PackedStringArray("SC")]
+offset_left = -50.0
+offset_top = 4.0
+offset_right = -5.0
+offset_bottom = 42.0
+scale = Vector2(1.00621, 1)
+text = "wat"
+script = ExtResource("4_2wxf4")
+SC = NodePath("..")
+metadata/_edit_use_anchors_ = true

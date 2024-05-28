@@ -1,12 +1,11 @@
 using Godot;
 using System;
+using System.Collections;
 
-public partial class b : Button
+public partial class ButtonMake : Button
 {
 	[Export]
-	public Node2D tile;
-	[Export]
-	public Main main;
+	public structure_create SC;
 	// Called when the node enters the scene tree for the first time.
 	public override void _Ready()
 	{
@@ -19,8 +18,7 @@ public partial class b : Button
 	public override void _Pressed()
 	{
 		base._Pressed();
-		main._on_button_pressed(tile);
+		SC._on_button_pressed(this);
 		QueueFree();
-
 	}
 }
