@@ -35,3 +35,124 @@ scale = Vector2(1.18059, 1.30378)
 script = ExtResource("4_chypx")
 tile = NodePath("..")
 main = NodePath("../..")
+metadata/_edit_use_anchors_ = true
+
+[node name="2" type="Node2D" parent="."]
+position = Vector2(400, 175)
+scale = Vector2(7.2256, 0.585776)
+
+[node name="Button" type="Button" parent="2" node_paths=PackedStringArray("tile", "main")]
+offset_left = -9.6
+offset_top = -103.31
+offset_right = 6.89
+offset_bottom = 48.085
+scale = Vector2(1.18059, 1.30378)
+script = ExtResource("4_chypx")
+tile = NodePath("..")
+main = NodePath("../..")
+metadata/_edit_use_anchors_ = true
+
+[node name="3" type="Node2D" parent="."]
+position = Vector2(577, 175)
+scale = Vector2(7.2256, 0.585776)
+
+[node name="Button" type="Button" parent="3" node_paths=PackedStringArray("tile", "main")]
+offset_left = -9.6
+offset_top = -103.31
+offset_right = 6.89
+offset_bottom = 48.085
+scale = Vector2(1.18059, 1.30378)
+script = ExtResource("4_chypx")
+tile = NodePath("..")
+main = NodePath("../..")
+metadata/_edit_use_anchors_ = true
+
+[node name="4" type="Node2D" parent="."]
+position = Vector2(755, 175)
+scale = Vector2(7.2256, 0.585776)
+
+[node name="Button" type="Button" parent="4" node_paths=PackedStringArray("tile", "main")]
+offset_left = -9.6
+offset_top = -103.31
+offset_right = 6.89
+offset_bottom = 48.085
+scale = Vector2(1.18059, 1.30378)
+script = ExtResource("4_chypx")
+tile = NodePath("..")
+main = NodePath("../..")
+metadata/_edit_use_anchors_ = true
+
+[node name="5" type="Node2D" parent="."]
+position = Vector2(930, 175)
+scale = Vector2(7.2256, 0.585776)
+
+[node name="Button" type="Button" parent="5" node_paths=PackedStringArray("tile", "main")]
+offset_left = -9.6
+offset_top = -103.31
+offset_right = 6.89
+offset_bottom = 48.085
+scale = Vector2(1.18059, 1.30378)
+script = ExtResource("4_chypx")
+tile = NodePath("..")
+main = NodePath("../..")
+metadata/_edit_use_anchors_ = true
+
+[node name="6" type="Node2D" parent="."]
+position = Vector2(225, 320)
+scale = Vector2(7.2256, 0.585776)
+
+[node name="Button" type="Button" parent="6" node_paths=PackedStringArray("tile", "main")]
+offset_left = -9.6
+offset_top = -103.31
+offset_right = 6.89
+offset_bottom = 48.085
+scale = Vector2(1.18059, 1.30378)
+script = ExtResource("4_chypx")
+tile = NodePath("..")
+main = NodePath("../..")
+metadata/_edit_use_anchors_ = true
+
+[node name="7" type="Node2D" parent="."]
+position = Vector2(400, 320)
+scale = Vector2(7.2256, 0.585776)
+
+[node name="Button" type="Button" parent="7" node_paths=PackedStringArray("tile", "main")]
+offset_left = -9.6
+offset_top = -103.31
+offset_right = 6.89
+offset_bottom = 48.085
+scale = Vector2(1.18059, 1.30378)
+script = ExtResource("4_chypx")
+tile = NodePath("../../6")
+main = NodePath("../..")
+metadata/_edit_use_anchors_ = true
+
+[node name="8" type="Node2D" parent="."]
+position = Vector2(577, 320)
+scale = Vector2(7.2256, 0.585776)
+
+[node name="Button" type="Button" parent="8" node_paths=PackedStringArray("tile", "main")]
+offset_left = -9.6
+offset_top = -103.31
+offset_right = 6.89
+offset_bottom = 48.085
+scale = Vector2(1.18059, 1.30378)
+script = ExtResource("4_chypx")
+tile = NodePath("../../6")
+main = NodePath("../..")
+metadata/_edit_use_anchors_ = true
+
+[node name="9" type="Node2D" parent="."]
+position = Vector2(755, 320)
+scale = Vector2(7.2256, 0.585776)
+
+[node name="Button" type="Button" parent="9" node_paths=PackedStringArray("tile", "main")]
+offset_left = -9.6
+offset_top = -103.31
+offset_right = 6.89
+offset_bottom = 48.085
+scale = Vector2(1.18059, 1.30378)
+script = ExtResource("4_chypx")
+tile = NodePath("../../6")
+main = NodePath("../..")
+metadata/_edit_use_anchors_ = true
