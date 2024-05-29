@@ -1,9 +1,10 @@
-[gd_scene load_steps=5 format=3 uid="uid://b5dxprvv4i4jv"]
+[gd_scene load_steps=6 format=3 uid="uid://b5dxprvv4i4jv"]
 
 [ext_resource type="Script" path="res://structure_create.cs" id="1_j28gg"]
 [ext_resource type="PackedScene" uid="uid://e4nflespis52" path="res://AnimalTile.tscn" id="2_1exk7"]
 [ext_resource type="PackedScene" uid="uid://bolhxti5prgm7" path="res://Farm.tscn" id="3_0qa5f"]
 [ext_resource type="Script" path="res://ButtonMake.cs" id="4_2wxf4"]
+[ext_resource type="PackedScene" uid="uid://4qdg5wlxp8r6" path="res://Water.tscn" id="4_kgp2m"]
 
 [node name="Node2D" type="Node2D" node_paths=PackedStringArray("ani", "dirt", "water", "rec")]
 script = ExtResource("1_j28gg")
@@ -13,6 +14,7 @@ water = NodePath("Button4")
 rec = NodePath("Button")
 aniScene = ExtResource("2_1exk7")
 dirtScene = ExtResource("3_0qa5f")
+waterScene = ExtResource("4_kgp2m")
 
 [node name="Button2" type="Button" parent="." node_paths=PackedStringArray("SC")]
 offset_left = 5.0
