@@ -1,4 +1,4 @@
-[gd_scene load_steps=16 format=3 uid="uid://b6jqxlout6a7p"]
+[gd_scene load_steps=30 format=3 uid="uid://b6jqxlout6a7p"]
 
 [ext_resource type="Script" path="res://Main.cs" id="1_f6bb0"]
 [ext_resource type="TileSet" uid="uid://caisq2bvgrfs7" path="res://Tiles.tres" id="1_qux4g"]
@@ -15,6 +15,20 @@
 [ext_resource type="Texture2D" uid="uid://dxyy4qwclaniu" path="res://Sprout Lands - Sprites - premium pack/Objects/work station.png" id="13_ew168"]
 [ext_resource type="Texture2D" uid="uid://dbj88rm4g558x" path="res://Sprout Lands - Sprites - premium pack/Sprout Lands - UI Pack - Premium pack/UI Sprites/ALL UI ASSETS on one sheet.png" id="14_775x1"]
 [ext_resource type="Texture2D" uid="uid://bas5i4nlhjrou" path="res://Sprout Lands - Sprites - premium pack/Objects/Items/Egg items.png" id="15_oc35v"]
+[ext_resource type="Texture2D" uid="uid://c4e3e1pe8qqyt" path="res://Sprout Lands - Sprites - premium pack/Characters/water from wateringcan frames.png" id="16_2p6xg"]
+[ext_resource type="Texture2D" uid="uid://dq8e0ahkdi2o3" path="res://Sprout Lands - Sprites - premium pack/Tilesets/Building parts/Basic_Furniture.png" id="17_d03tx"]
+[ext_resource type="Texture2D" uid="uid://b8x7pkyc2iymv" path="res://Sprout Lands - Sprites - premium pack/Tilesets/Building parts/Mailbox Animation Frames.png" id="18_7k15m"]
+[ext_resource type="Texture2D" uid="uid://xpcyohp85rml" path="res://Sprout Lands - Sprites - premium pack/Tilesets/Building parts/Fences.png" id="19_pp7tg"]
+[ext_resource type="Texture2D" uid="uid://bfospy6xjn5fk" path="res://Sprout Lands - Sprites - premium pack/Tilesets/Building parts/Fence gates animation sprites .png" id="20_7686n"]
+[ext_resource type="Texture2D" uid="uid://dpaq4aq3c0ru1" path="res://Sprout Lands - Sprites - premium pack/Tilesets/Building parts/Chest.png" id="21_xxd0u"]
+[ext_resource type="Texture2D" uid="uid://dhm8a85ysjcyh" path="res://Sprout Lands - Sprites - premium pack/Tilesets/Building parts/Wood Bridge.png" id="22_dlprp"]
+[ext_resource type="Texture2D" uid="uid://c8yomsu2jsqfl" path="res://Sprout Lands - Sprites - premium pack/Tilesets/Building parts/STONE PATH.png" id="23_gn8b5"]
+[ext_resource type="Texture2D" uid="uid://bxcp5juw6ilyc" path="res://Sprout Lands - Sprites - premium pack/Tilesets/Building parts/Wooden House.png" id="24_3h6ec"]
+[ext_resource type="Texture2D" uid="uid://d2jojdmdxwrbg" path="res://Sprout Lands - Sprites - premium pack/Tilesets/Building parts/Animal Structures/Water tray.png" id="25_dpwhy"]
+[ext_resource type="Texture2D" uid="uid://c1cd2pkquipt" path="res://Sprout Lands - Sprites - premium pack/Animals/Chicken_Baby/Chicken_Baby.png" id="26_7i4i8"]
+[ext_resource type="Texture2D" uid="uid://mgw7o1rltpgq" path="res://Sprout Lands - Sprites - premium pack/Animals/Chicken/chicken blue.png" id="27_gsnek"]
+[ext_resource type="Texture2D" uid="uid://bhragcj38g46j" path="res://Sprout Lands - Sprites - premium pack/Animals/Chicken/chicken green.png" id="28_svhhb"]
+[ext_resource type="PackedScene" uid="uid://rq5f8plg6yfp" path="res://UI.tscn" id="29_uj0am"]
 
 [node name="Node2D" type="Node2D"]
 script = ExtResource("1_f6bb0")
@@ -22,10 +36,11 @@ fenceScene = ExtResource("2_sgalq")
 
 [node name="ColorRect" type="ColorRect" parent="."]
 offset_left = -29.0
-offset_top = -12.0
+offset_top = -24.0
 offset_right = 1171.0
 offset_bottom = 669.0
 color = Color(0.545098, 0.745098, 0.756863, 1)
+metadata/_edit_use_anchors_ = true
 
 [node name="TileMap" type="TileMap" parent="."]
 tile_set = ExtResource("1_qux4g")
@@ -327,3 +342,61 @@ texture = ExtResource("14_775x1")
 [node name="EggItems" type="Sprite2D" parent="."]
 position = Vector2(-1278, 448)
 texture = ExtResource("15_oc35v")
+
+[node name="WaterObjects3" type="Sprite2D" parent="."]
+position = Vector2(-936, 504)
+texture = ExtResource("6_6aln6")
+
+[node name="WaterFromWateringcanFrames" type="Sprite2D" parent="."]
+position = Vector2(-2380, 1053)
+texture = ExtResource("16_2p6xg")
+
+[node name="BasicFurniture" type="Sprite2D" parent="."]
+position = Vector2(-1997, 1265)
+texture = ExtResource("17_d03tx")
+
+[node name="MailboxAnimationFrames" type="Sprite2D" parent="."]
+position = Vector2(-1735, 1270)
+texture = ExtResource("18_7k15m")
+
+[node name="Fences" type="Sprite2D" parent="."]
+position = Vector2(-2113, 1433)
+texture = ExtResource("19_pp7tg")
+
+[node name="FenceGatesAnimationSprites" type="Sprite2D" parent="."]
+position = Vector2(-2204, 1349)
+texture = ExtResource("20_7686n")
+
+[node name="Chest" type="Sprite2D" parent="."]
+position = Vector2(-2362, 1227)
+texture = ExtResource("21_xxd0u")
+
+[node name="WoodBridge" type="Sprite2D" parent="."]
+position = Vector2(-2516, 1454)
+texture = ExtResource("22_dlprp")
+
+[node name="StonePath" type="Sprite2D" parent="."]
+position = Vector2(-2511, 1367)
+texture = ExtResource("23_gn8b5")
+
+[node name="WoodenHouse" type="Sprite2D" parent="."]
+position = Vector2(-2385, 1492)
+texture = ExtResource("24_3h6ec")
+
+[node name="WaterTray" type="Sprite2D" parent="."]
+position = Vector2(-2691, 1496)
+texture = ExtResource("25_dpwhy")
+
+[node name="ChickenBaby" type="Sprite2D" parent="."]
+position = Vector2(-3066, 822)
+texture = ExtResource("26_7i4i8")
+
+[node name="ChickenBlue" type="Sprite2D" parent="."]
+position = Vector2(-3218, 780)
+texture = ExtResource("27_gsnek")
+
+[node name="ChickenGreen" type="Sprite2D" parent="."]
+position = Vector2(-3039, 541)
+texture = ExtResource("28_svhhb")
+
+[node name="CanvasLayer" parent="." instance=ExtResource("29_uj0am")]

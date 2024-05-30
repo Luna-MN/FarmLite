@@ -10,4 +10,4 @@ script = ExtResource("1_4ft4j")
 position = Vector2(8, 8)
 tile_set = ExtResource("1_1tbui")
 format = 2
-layer_0/tile_data = PackedInt32Array(-1, 458759, 11)
+layer_0/tile_data = PackedInt32Array(-1, 9, 0)
