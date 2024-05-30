@@ -33,6 +33,11 @@ public partial class CreateWater : Node2D
 				{
 					GD.Print("Button pressed");
 				}
+				if (mouseButton.ButtonIndex == MouseButton.Left && !mouseButton.Pressed)
+				{
+					GD.Print("Button released");
+					// drop 
+				}
 			}
 		}
 	}
