@@ -1,8 +1,10 @@
-[gd_scene load_steps=2 format=3 uid="uid://dknw6gjhstwuq"]
+[gd_scene load_steps=3 format=3 uid="uid://dknw6gjhstwuq"]
 
 [ext_resource type="TileSet" uid="uid://caisq2bvgrfs7" path="res://Tiles.tres" id="1_1tbui"]
+[ext_resource type="Script" path="res://waterDrag.cs" id="1_4ft4j"]
 
 [node name="Node2D" type="Node2D"]
+script = ExtResource("1_4ft4j")
 
 [node name="TileMap" type="TileMap" parent="."]
 position = Vector2(8, 8)

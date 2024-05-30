@@ -4,7 +4,9 @@ using System;
 public partial class CreateWater : Node2D
 {
 	[Export] CollisionObject2D MyCollider;
+	[Export] PackedScene waterPress;
 	bool enter = false;
+	waterDrag made;
 
 	public override void _Ready()
 	{
@@ -31,14 +33,20 @@ public partial class CreateWater : Node2D
 			{
 				if (mouseButton.ButtonIndex == MouseButton.Left && mouseButton.Pressed)
 				{
-					GD.Print("Button pressed");
-				}
-				if (mouseButton.ButtonIndex == MouseButton.Left && !mouseButton.Pressed)
-				{
-					GD.Print("Button released");
-					// drop 
+					made = waterPress.Instantiate<waterDrag>();
+					GetTree().Root.AddChild(made);
+					made.drag = true;
 				}
 			}
 		}
+
+		if (@event is InputEventMouseButton mouseButtonn)
+		{
+			if (mouseButtonn.ButtonIndex == MouseButton.Left && !mouseButtonn.Pressed)
+			{
+				made.drag = false;
+			}
+		}
+
 	}
 }

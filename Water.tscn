@@ -1,6 +1,7 @@
-[gd_scene load_steps=4 format=3 uid="uid://4qdg5wlxp8r6"]
+[gd_scene load_steps=5 format=3 uid="uid://4qdg5wlxp8r6"]
 
 [ext_resource type="TileSet" uid="uid://caisq2bvgrfs7" path="res://Tiles.tres" id="1_0s12t"]
+[ext_resource type="PackedScene" uid="uid://dknw6gjhstwuq" path="res://waterDrag.tscn" id="2_buvio"]
 [ext_resource type="Script" path="res://CreateWater.cs" id="2_m3r0b"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_7pj2g"]
@@ -9,6 +10,7 @@ size = Vector2(83, 67)
 [node name="Node2D" type="Node2D" node_paths=PackedStringArray("MyCollider")]
 script = ExtResource("2_m3r0b")
 MyCollider = NodePath("Area2D")
+waterPress = ExtResource("2_buvio")
 
 [node name="ColorRect" type="ColorRect" parent="."]
 offset_left = -46.0
