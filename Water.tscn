@@ -36,3 +36,4 @@ position = Vector2(9, -1)
 shape = SubResource("RectangleShape2D_7pj2g")
 
 [connection signal="mouse_entered" from="Area2D" to="." method="CreateWaterPress"]
+[connection signal="mouse_exited" from="Area2D" to="." method="CreateWaterRelease"]

@@ -4,17 +4,23 @@ using System;
 public partial class CreateWater : Node2D
 {
 	[Export] CollisionObject2D MyCollider;
-	bool enter = false;
+	bool enter = false, LMB = false, once = true;
 
 	public override void _Ready()
 	{
 	}
-
+	public override void _Process(double delta)
+	{
+	}
 
 
 	private void CreateWaterPress()
 	{
 		enter = true;
+	}
+	private void CreateWaterRelease()
+	{
+		enter = false;
 	}
 	public override void _Input(InputEvent @event)
 	{
@@ -23,10 +29,10 @@ public partial class CreateWater : Node2D
 		{
 			if (@event is InputEventMouseButton mouseButton)
 			{
-				if (mouseButton.ButtonIndex == MouseButton.Left)
+				if (mouseButton.ButtonIndex == MouseButton.Left && mouseButton.Pressed)
 				{
-
 					GD.Print("Button pressed");
+					LMB = true;
 				}
 			}
 		}
