@@ -1,30 +1,34 @@
 using Godot;
 using System;
 
-public partial class CreateWater : Area2D
+public partial class CreateWater : Node2D
 {
 	[Export] CollisionObject2D MyCollider;
+	bool enter = false;
 
 	public override void _Ready()
 	{
-
-		MyCollider.InputEvent += MyInputMethod;
-
 	}
 
-	void MyInputMethod(Node viewport, InputEvent @event, long shapeIdx)
+
+
+	private void CreateWaterPress()
 	{
-
-		if (@event is InputEventMouseButton mousButt)
+		enter = true;
+	}
+	public override void _Input(InputEvent @event)
+	{
+		base._Input(@event);
+		if (enter)
 		{
-
-			if (mousButt.Pressed)
+			if (@event is InputEventMouseButton mouseButton)
 			{
+				if (mouseButton.ButtonIndex == MouseButton.Left)
+				{
 
-				GD.Print("woooo");
+					GD.Print("Button pressed");
+				}
 			}
-
 		}
-
 	}
 }
