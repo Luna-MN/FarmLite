@@ -4,7 +4,7 @@ using System;
 public partial class CreateWater : Node2D
 {
 	[Export] CollisionObject2D MyCollider;
-	bool enter = false, LMB = false, once = true;
+	bool enter = false;
 
 	public override void _Ready()
 	{
@@ -32,7 +32,6 @@ public partial class CreateWater : Node2D
 				if (mouseButton.ButtonIndex == MouseButton.Left && mouseButton.Pressed)
 				{
 					GD.Print("Button pressed");
-					LMB = true;
 				}
 			}
 		}
