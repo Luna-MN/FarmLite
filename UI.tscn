@@ -1,9 +1,15 @@
-[gd_scene load_steps=3 format=3 uid="uid://rq5f8plg6yfp"]
+[gd_scene load_steps=5 format=3 uid="uid://rq5f8plg6yfp"]
 
+[ext_resource type="Script" path="res://UI.cs" id="1_fle5h"]
 [ext_resource type="Texture2D" uid="uid://dbj88rm4g558x" path="res://Sprout Lands - Sprites - premium pack/Sprout Lands - UI Pack - Premium pack/UI Sprites/ALL UI ASSETS on one sheet.png" id="1_q0oyg"]
 [ext_resource type="TileSet" uid="uid://caisq2bvgrfs7" path="res://Tiles.tres" id="2_rsvgo"]
 
-[node name="CanvasLayer" type="CanvasLayer"]
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_p3w0k"]
+
+[node name="CanvasLayer" type="CanvasLayer" node_paths=PackedStringArray("MyCollider", "tileMap")]
+script = ExtResource("1_fle5h")
+MyCollider = NodePath("Area2D")
+tileMap = NodePath("TileMap")
 
 [node name="AllUiAssetsOnOneSheet" type="Sprite2D" parent="."]
 position = Vector2(-994, 75)
@@ -27,3 +33,12 @@ layer_2/y_sort_enabled = false
 layer_2/y_sort_origin = 0
 layer_2/z_index = 0
 layer_2/tile_data = PackedInt32Array(458822, 458763, 41, 524358, 458763, 42, 458823, 524299, 41, 524359, 524299, 42, 1704006, 983051, 41, 1769542, 983051, 42, 1704007, 1048587, 41, 1769543, 1048587, 42)
+
+[node name="Area2D" type="Area2D" parent="."]
+position = Vector2(1136, 128)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+shape = SubResource("RectangleShape2D_p3w0k")
+
+[connection signal="mouse_entered" from="Area2D" to="." method="CreateWaterPress"]
+[connection signal="mouse_exited" from="Area2D" to="." method="CreateWaterRelease"]
