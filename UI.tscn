@@ -55,5 +55,13 @@ position = Vector2(1136, 128)
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
 shape = SubResource("RectangleShape2D_p3w0k")
 
+[node name="Area2D2" type="Area2D" parent="."]
+position = Vector2(1136, 432)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D2"]
+shape = SubResource("RectangleShape2D_p3w0k")
+
 [connection signal="mouse_entered" from="Area2D" to="." method="CreateWaterPress"]
 [connection signal="mouse_exited" from="Area2D" to="." method="CreateWaterRelease"]
+[connection signal="mouse_entered" from="Area2D2" to="." method="animalPress"]
+[connection signal="mouse_exited" from="Area2D2" to="." method="animalRelease"]
