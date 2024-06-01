@@ -33,7 +33,7 @@ public partial class UI : CanvasLayer
 			{
 				if (mouseButton.ButtonIndex == MouseButton.Left && mouseButton.Pressed)
 				{
-					tileMap.SetLayerEnabled(2, false);
+					tileMap.SetLayerEnabled(3, false);
 				}
 			}
 		}
@@ -42,7 +42,7 @@ public partial class UI : CanvasLayer
 		{
 			if (mouseButtonn.ButtonIndex == MouseButton.Left && !mouseButtonn.Pressed)
 			{
-				tileMap.SetLayerEnabled(2, true);
+				tileMap.SetLayerEnabled(3, true);
 			}
 		}
 
