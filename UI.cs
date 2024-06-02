@@ -5,7 +5,7 @@ public partial class UI : CanvasLayer
 {
 	[Export] CollisionObject2D MyCollider;
 	[Export] TileMap tileMap;
-	bool enter = false, enterA = false;
+	bool enter = false, enterA = false, openP = true, openA = true;
 	waterDrag made;
 	private void CreateWaterPress()
 	{
@@ -43,6 +43,20 @@ public partial class UI : CanvasLayer
 				if (mouseButton.ButtonIndex == MouseButton.Left && mouseButton.Pressed)
 				{
 					tileMap.SetLayerEnabled(3, false);
+					if (!openP)
+					{
+						tileMap.SetLayerEnabled(1, false);
+						tileMap.SetLayerEnabled(2, false);
+						openP = true;
+					}
+					if (openP)
+					{
+						tileMap.SetLayerEnabled(1, true);
+						tileMap.SetLayerEnabled(2, true);
+						openP = false;
+					}
+
+					GD.Print(openP);
 				}
 			}
 		}
