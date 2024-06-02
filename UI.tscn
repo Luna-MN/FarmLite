@@ -1,7 +1,8 @@
-[gd_scene load_steps=5 format=3 uid="uid://rq5f8plg6yfp"]
+[gd_scene load_steps=6 format=3 uid="uid://rq5f8plg6yfp"]
 
 [ext_resource type="Script" path="res://UI.cs" id="1_fle5h"]
 [ext_resource type="Texture2D" uid="uid://dbj88rm4g558x" path="res://Sprout Lands - Sprites - premium pack/Sprout Lands - UI Pack - Premium pack/UI Sprites/ALL UI ASSETS on one sheet.png" id="1_q0oyg"]
+[ext_resource type="PackedScene" uid="uid://ckvbu3jy2kdti" path="res://Seeds.tscn" id="2_nvonb"]
 [ext_resource type="TileSet" uid="uid://caisq2bvgrfs7" path="res://Tiles.tres" id="2_rsvgo"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_p3w0k"]
@@ -10,6 +11,7 @@
 script = ExtResource("1_fle5h")
 MyCollider = NodePath("Area2D")
 tileMap = NodePath("TileMap")
+Seeds = ExtResource("2_nvonb")
 
 [node name="AllUiAssetsOnOneSheet" type="Sprite2D" parent="."]
 position = Vector2(-994, 75)
@@ -21,14 +23,14 @@ format = 2
 layer_0/name = "ButtonDown"
 layer_0/tile_data = PackedInt32Array(458822, 589835, 41, 524358, 589835, 42, 458823, 655371, 41, 524359, 655371, 42, 1704006, 589835, 41, 1769542, 589835, 42, 1704007, 655371, 41, 1769543, 655371, 42)
 layer_1/name = ""
-layer_1/enabled = true
+layer_1/enabled = false
 layer_1/modulate = Color(1, 1, 1, 1)
 layer_1/y_sort_enabled = false
 layer_1/y_sort_origin = 0
 layer_1/z_index = 0
 layer_1/tile_data = PackedInt32Array(196676, 65548, 1, 196675, 12, 1, 196677, 131084, 1, 262212, 1441803, 4, 131140, 65548, 1, 262213, 131084, 1, 131141, 131084, 1, 262211, 12, 1, 131139, 12, 1, 327748, 1441803, 4, 393284, 1441803, 4, 458820, 1441803, 4, 524356, 1441803, 4, 589892, 1441803, 4, 327749, 131084, 1, 393285, 131084, 1, 458821, 131084, 1, 524357, 131084, 1, 327747, 12, 1, 393283, 12, 1, 458819, 12, 1, 524355, 12, 1, 589891, 12, 1, 589893, 131084, 1, 655429, 131084, 1, 655428, 65548, 1, 655427, 12, 1, 720964, 65548, 1, 786500, 65548, 1, 786501, 131084, 1, 720965, 131084, 1, 720963, 12, 1, 786499, 12, 1, 852036, 65548, 1, 852037, 131084, 1, 917573, 131084, 2, 917572, 65548, 2, 917571, 12, 2, 852035, 12, 1, 65605, 131084, 0, 65604, 65548, 0, 65603, 12, 0, 1704006, 1114123, 41, 1769542, 1114123, 42, 1704007, 1179659, 41, 1769543, 1179659, 42)
 layer_2/name = "seeds"
-layer_2/enabled = true
+layer_2/enabled = false
 layer_2/modulate = Color(1, 1, 1, 1)
 layer_2/y_sort_enabled = false
 layer_2/y_sort_origin = 0

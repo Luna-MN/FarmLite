@@ -3,9 +3,14 @@ using System;
 
 public partial class UI : CanvasLayer
 {
-	[Export] CollisionObject2D MyCollider;
-	[Export] TileMap tileMap;
-	bool enter = false, enterA = false, openP = true, openA = true;
+	[Export]
+	CollisionObject2D MyCollider;
+	[Export]
+	TileMap tileMap;
+	[Export]
+	PackedScene Seeds;
+	bool enter = false, enterA = false, openP = false, openA = true;
+	CanvasLayer seedI;
 	waterDrag made;
 	private void CreateWaterPress()
 	{
@@ -45,14 +50,13 @@ public partial class UI : CanvasLayer
 					tileMap.SetLayerEnabled(3, false);
 					if (openP)
 					{
-						tileMap.SetLayerEnabled(1, false);
-						tileMap.SetLayerEnabled(2, false);
+						seedI.QueueFree();
 						openP = false;
 					}
 					else if (!openP)
 					{
-						tileMap.SetLayerEnabled(1, true);
-						tileMap.SetLayerEnabled(2, true);
+						seedI = Seeds.Instantiate<CanvasLayer>();
+						AddChild(seedI);
 						openP = true;
 					}
 
