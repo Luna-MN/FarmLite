@@ -43,18 +43,19 @@ public partial class UI : CanvasLayer
 				if (mouseButton.ButtonIndex == MouseButton.Left && mouseButton.Pressed)
 				{
 					tileMap.SetLayerEnabled(3, false);
-					if (!openP)
+					if (openP)
 					{
 						tileMap.SetLayerEnabled(1, false);
 						tileMap.SetLayerEnabled(2, false);
-						openP = true;
+						openP = false;
 					}
-					if (openP)
+					else if (!openP)
 					{
 						tileMap.SetLayerEnabled(1, true);
 						tileMap.SetLayerEnabled(2, true);
-						openP = false;
+						openP = true;
 					}
+
 
 					GD.Print(openP);
 				}
