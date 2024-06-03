@@ -8,7 +8,7 @@ public partial class UI : CanvasLayer
 	[Export]
 	TileMap tileMap;
 	[Export]
-	PackedScene Seeds;
+	PackedScene Seeds, animals;
 	bool enter = false, enterA = false, openP = false, openA = true;
 	CanvasLayer seedI;
 	waterDrag made;

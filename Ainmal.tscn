@@ -1,0 +1,17 @@
+[gd_scene load_steps=2 format=3 uid="uid://d2o8cncbptddj"]
+
+[ext_resource type="TileSet" uid="uid://caisq2bvgrfs7" path="res://Tiles.tres" id="1_e7q6w"]
+
+[node name="CanvasLayer" type="CanvasLayer"]
+
+[node name="TileMap" type="TileMap" parent="."]
+tile_set = ExtResource("1_e7q6w")
+format = 2
+layer_0/tile_data = PackedInt32Array(1966148, 65548, 1, 2031684, 65548, 2, 2031685, 131084, 2, 2031683, 12, 2, 1966147, 12, 1, 1900611, 12, 1, 1966149, 131084, 1, 1900613, 131084, 1, 1835077, 131084, 1, 1769541, 131084, 1, 1900612, 65548, 1, 1835076, 65548, 1, 1769540, 65548, 1, 1638469, 131084, 1, 1572933, 131084, 1, 1507396, 65548, 1, 1507397, 131084, 1, 1507395, 12, 1, 1572931, 12, 1, 1638467, 12, 1, 1704003, 12, 1, 1769539, 12, 1, 1835075, 12, 1, 1704004, 65548, 1, 1704005, 131084, 1, 1441860, 65548, 0, 1441861, 131084, 0, 1441859, 12, 0, 1572932, 65548, 1, 1638468, 65548, 1)
+layer_1/name = "animal"
+layer_1/enabled = true
+layer_1/modulate = Color(1, 1, 1, 1)
+layer_1/y_sort_enabled = false
+layer_1/y_sort_origin = 0
+layer_1/z_index = 0
+layer_1/tile_data = PackedInt32Array(1966148, 262151, 1, 1835076, 262151, 3, 1638468, 196615, 11, 1507396, 327687, 7)
