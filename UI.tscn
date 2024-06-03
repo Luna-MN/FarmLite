@@ -1,9 +1,10 @@
-[gd_scene load_steps=6 format=3 uid="uid://rq5f8plg6yfp"]
+[gd_scene load_steps=7 format=3 uid="uid://rq5f8plg6yfp"]
 
 [ext_resource type="Script" path="res://UI.cs" id="1_fle5h"]
 [ext_resource type="Texture2D" uid="uid://dbj88rm4g558x" path="res://Sprout Lands - Sprites - premium pack/Sprout Lands - UI Pack - Premium pack/UI Sprites/ALL UI ASSETS on one sheet.png" id="1_q0oyg"]
 [ext_resource type="PackedScene" uid="uid://ckvbu3jy2kdti" path="res://Seeds.tscn" id="2_nvonb"]
 [ext_resource type="TileSet" uid="uid://caisq2bvgrfs7" path="res://Tiles.tres" id="2_rsvgo"]
+[ext_resource type="PackedScene" uid="uid://d2o8cncbptddj" path="res://Ainmal.tscn" id="3_hgha3"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_p3w0k"]
 
@@ -12,6 +13,7 @@ script = ExtResource("1_fle5h")
 MyCollider = NodePath("Area2D")
 tileMap = NodePath("TileMap")
 Seeds = ExtResource("2_nvonb")
+animals = ExtResource("3_hgha3")
 
 [node name="AllUiAssetsOnOneSheet" type="Sprite2D" parent="."]
 position = Vector2(-994, 75)
@@ -21,7 +23,7 @@ texture = ExtResource("1_q0oyg")
 tile_set = ExtResource("2_rsvgo")
 format = 2
 layer_0/name = "ButtonDown"
-layer_0/tile_data = PackedInt32Array(458822, 589835, 41, 524358, 589835, 42, 458823, 655371, 41, 524359, 655371, 42, 1704006, 589835, 41, 1769542, 589835, 42, 1704007, 655371, 41, 1769543, 655371, 42)
+layer_0/tile_data = PackedInt32Array(458822, 589835, 41, 524358, 589835, 42, 458823, 655371, 41, 524359, 655371, 42, 1704006, 1114123, 41, 1769542, 1114123, 42, 1704007, 1179659, 41, 1769543, 1179659, 42)
 layer_1/name = ""
 layer_1/enabled = false
 layer_1/modulate = Color(1, 1, 1, 1)

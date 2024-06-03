@@ -9,8 +9,8 @@ public partial class UI : CanvasLayer
 	TileMap tileMap;
 	[Export]
 	PackedScene Seeds, animals;
-	bool enter = false, enterA = false, openP = false, openA = true;
-	CanvasLayer seedI;
+	bool enter = false, enterA = false, openP = false, openA = false;
+	CanvasLayer seedI, animalI;
 	waterDrag made;
 	private void CreateWaterPress()
 	{
@@ -74,14 +74,13 @@ public partial class UI : CanvasLayer
 					tileMap.SetLayerEnabled(4, false);
 					if (openA)
 					{
-						tileMap.SetLayerEnabled(5, false);
-						tileMap.SetLayerEnabled(6, false);
+						animalI.QueueFree();
 						openA = false;
 					}
 					else if (!openA)
 					{
-						tileMap.SetLayerEnabled(5, true);
-						tileMap.SetLayerEnabled(6, true);
+						animalI = animals.Instantiate<CanvasLayer>();
+						AddChild(animalI);
 						openA = true;
 					}
 
