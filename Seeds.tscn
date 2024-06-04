@@ -1,6 +1,8 @@
-[gd_scene load_steps=2 format=3 uid="uid://ckvbu3jy2kdti"]
+[gd_scene load_steps=3 format=3 uid="uid://ckvbu3jy2kdti"]
 
 [ext_resource type="TileSet" uid="uid://caisq2bvgrfs7" path="res://Tiles.tres" id="1_wht38"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_cb3jb"]
 
 [node name="CanvasLayer" type="CanvasLayer"]
 
@@ -16,3 +18,9 @@ layer_1/y_sort_enabled = false
 layer_1/y_sort_origin = 0
 layer_1/z_index = 0
 layer_1/tile_data = PackedInt32Array(131140, 7, 1, 262212, 7, 2, 393284, 7, 7, 852036, 7, 12, 720964, 7, 14, 589892, 7, 10)
+
+[node name="Area2D" type="Area2D" parent="."]
+position = Vector2(1096, 40)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+shape = SubResource("RectangleShape2D_cb3jb")
