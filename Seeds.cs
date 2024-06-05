@@ -5,6 +5,7 @@ public partial class Seeds : CanvasLayer
 {
 	bool Corn = false;
 	PackedScene Cornseed;
+	Cornseed made;
 
 	private void CornEnter()
 	{
