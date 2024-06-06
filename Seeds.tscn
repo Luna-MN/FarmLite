@@ -1,12 +1,14 @@
-[gd_scene load_steps=4 format=3 uid="uid://ckvbu3jy2kdti"]
+[gd_scene load_steps=5 format=3 uid="uid://ckvbu3jy2kdti"]
 
 [ext_resource type="Script" path="res://Seeds.cs" id="1_oq0k6"]
 [ext_resource type="TileSet" uid="uid://caisq2bvgrfs7" path="res://Tiles.tres" id="1_wht38"]
+[ext_resource type="PackedScene" uid="uid://cfdsxevsk1b0h" path="res://Cornseed.tscn" id="2_8tty2"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_cb3jb"]
 
 [node name="CanvasLayer" type="CanvasLayer"]
 script = ExtResource("1_oq0k6")
+Cornseed = ExtResource("2_8tty2")
 
 [node name="TileMap" type="TileMap" parent="."]
 tile_set = ExtResource("1_wht38")

@@ -4,6 +4,7 @@ using System;
 public partial class Seeds : CanvasLayer
 {
 	bool Corn = false;
+	[Export]
 	PackedScene Cornseed;
 	Cornseed made;
 
