@@ -21,13 +21,13 @@ layer_1/modulate = Color(1, 1, 1, 1)
 layer_1/y_sort_enabled = false
 layer_1/y_sort_origin = 0
 layer_1/z_index = 0
-layer_1/tile_data = PackedInt32Array(131140, 7, 1, 262212, 7, 2, 393284, 7, 7, 852036, 7, 12, 720964, 7, 14, 589892, 7, 10)
+layer_1/tile_data = PackedInt32Array(131140, 7, 1, 262212, 7, 2, 393284, 7, 7, 720964, 7, 14, 589892, 7, 10, 852036, 65543, 8)
 
-[node name="Area2D" type="Area2D" parent="."]
+[node name="Corn" type="Area2D" parent="."]
 position = Vector2(1096, 40)
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Corn"]
 shape = SubResource("RectangleShape2D_cb3jb")
 
-[connection signal="mouse_entered" from="Area2D" to="." method="CornEnter"]
-[connection signal="mouse_exited" from="Area2D" to="." method="CornExit"]
+[connection signal="mouse_entered" from="Corn" to="." method="CornEnter"]
+[connection signal="mouse_exited" from="Corn" to="." method="CornExit"]

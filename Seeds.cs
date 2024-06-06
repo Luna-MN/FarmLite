@@ -3,7 +3,7 @@ using System;
 
 public partial class Seeds : CanvasLayer
 {
-	bool Corn = false;
+	bool Corn = false, Carrot = false, Cabbage = false, Parsnip = false, cucumber = false, wheat = false;
 	[Export]
 	public PackedScene Cornseed;
 	Cornseed made;
@@ -19,8 +19,48 @@ public partial class Seeds : CanvasLayer
 	}
 	private void CarrotEnter()
 	{
-
-
+		Carrot = true;
+		GD.Print("Carrot");
+	}
+	private void CarrotExit()
+	{
+		Carrot = false;
+	}
+	private void CabbageEnter()
+	{
+		Cabbage = true;
+		GD.Print("Cabbage");
+	}
+	private void CabbageExit()
+	{
+		Cabbage = false;
+	}
+	private void ParsnipEnter()
+	{
+		Parsnip = true;
+		GD.Print("Parsnip");
+	}
+	private void ParsnipExit()
+	{
+		Parsnip = false;
+	}
+	private void CucumberEnter()
+	{
+		cucumber = true;
+		GD.Print("Cucumber");
+	}
+	private void CucumberExit()
+	{
+		cucumber = false;
+	}
+	private void WheatEnter()
+	{
+		wheat = true;
+		GD.Print("Wheat");
+	}
+	private void WheatExit()
+	{
+		wheat = false;
 	}
 	// Called when the node enters the scene tree for the first time.
 	public override void _Ready()
