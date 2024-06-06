@@ -5,12 +5,13 @@ public partial class Seeds : CanvasLayer
 {
 	bool Corn = false;
 	[Export]
-	PackedScene Cornseed;
+	public PackedScene Cornseed;
 	Cornseed made;
 
 	private void CornEnter()
 	{
 		Corn = true;
+		GD.Print("Corn");
 	}
 	private void CornExit()
 	{
@@ -35,6 +36,7 @@ public partial class Seeds : CanvasLayer
 			{
 				if (mouseButton.ButtonIndex == MouseButton.Left && mouseButton.Pressed)
 				{
+					GD.Print("Button pressed");
 					made = Cornseed.Instantiate<Cornseed>();
 					GetTree().Root.AddChild(made);
 					made.drag = true;
