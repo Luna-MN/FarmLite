@@ -8,59 +8,75 @@ public partial class Seeds : CanvasLayer
 	public PackedScene Cornseed;
 	Cornseed made;
 
+	private void SetSeedStatus(ref bool seed, string seedName)
+	{
+		seed = true;
+		GD.Print(seedName);
+	}
+
+	private void ResetSeedStatus(ref bool seed)
+	{
+		seed = false;
+	}
+
 	private void CornEnter()
 	{
-		Corn = true;
-		GD.Print("Corn");
+		SetSeedStatus(ref Corn, "Corn");
 	}
+
 	private void CornExit()
 	{
-		Corn = false;
+		ResetSeedStatus(ref Corn);
 	}
+
 	private void CarrotEnter()
 	{
-		Carrot = true;
-		GD.Print("Carrot");
+		SetSeedStatus(ref Carrot, "Carrot");
 	}
+
 	private void CarrotExit()
 	{
-		Carrot = false;
+		ResetSeedStatus(ref Carrot);
 	}
+
 	private void CabbageEnter()
 	{
-		Cabbage = true;
-		GD.Print("Cabbage");
+		SetSeedStatus(ref Cabbage, "Cabbage");
 	}
+
 	private void CabbageExit()
 	{
-		Cabbage = false;
+		ResetSeedStatus(ref Cabbage);
 	}
+
 	private void ParsnipEnter()
 	{
-		Parsnip = true;
-		GD.Print("Parsnip");
+		SetSeedStatus(ref Parsnip, "Parsnip");
 	}
+
 	private void ParsnipExit()
 	{
-		Parsnip = false;
+		ResetSeedStatus(ref Parsnip);
 	}
+
 	private void CucumberEnter()
 	{
-		cucumber = true;
-		GD.Print("Cucumber");
+		SetSeedStatus(ref cucumber, "Cucumber");
 	}
+
 	private void CucumberExit()
 	{
-		cucumber = false;
+		ResetSeedStatus(ref cucumber);
 	}
+
 	private void WheatEnter()
 	{
-		wheat = true;
-		GD.Print("Wheat");
+		SetSeedStatus(ref wheat, "Wheat");
 	}
+
 	private void WheatExit()
 	{
-		wheat = false;
+		ResetSeedStatus(ref wheat);
 	}
 	// Called when the node enters the scene tree for the first time.
 	public override void _Ready()
