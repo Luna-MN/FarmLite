@@ -75,6 +75,12 @@ public partial class Seeds : CanvasLayer
 	public override void _Input(InputEvent @event)
 	{
 		base._Input(@event);
+		DragCreate(@event);
+
+	}
+
+	private void DragCreate(InputEvent @event)
+	{
 		if (Corn)
 		{
 			if (@event is InputEventMouseButton mouseButton)
@@ -96,7 +102,5 @@ public partial class Seeds : CanvasLayer
 				made.drag = false;
 			}
 		}
-
 	}
-
 }

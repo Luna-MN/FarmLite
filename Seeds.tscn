@@ -21,7 +21,7 @@ layer_1/modulate = Color(1, 1, 1, 1)
 layer_1/y_sort_enabled = false
 layer_1/y_sort_origin = 0
 layer_1/z_index = 0
-layer_1/tile_data = PackedInt32Array(131140, 7, 1, 262212, 7, 2, 393284, 7, 7, 720964, 7, 14, 589892, 7, 10, 852036, 65543, 8)
+layer_1/tile_data = PackedInt32Array(131140, 7, 1, 262212, 7, 2, 393284, 7, 7, 720964, 7, 14, 589892, 7, 10, 852036, 7, 8)
 
 [node name="Corn" type="Area2D" parent="."]
 position = Vector2(1096, 40)
@@ -29,5 +29,37 @@ position = Vector2(1096, 40)
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Corn"]
 shape = SubResource("RectangleShape2D_cb3jb")
 
+[node name="Carrot" type="Area2D" parent="."]
+position = Vector2(1096, 72)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Carrot"]
+shape = SubResource("RectangleShape2D_cb3jb")
+
+[node name="Cabbage" type="Area2D" parent="."]
+position = Vector2(1096, 72)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Cabbage"]
+shape = SubResource("RectangleShape2D_cb3jb")
+
+[node name="Parsnip" type="Area2D" parent="."]
+position = Vector2(1096, 72)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Parsnip"]
+shape = SubResource("RectangleShape2D_cb3jb")
+
+[node name="Cucumber" type="Area2D" parent="."]
+position = Vector2(1096, 72)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Cucumber"]
+shape = SubResource("RectangleShape2D_cb3jb")
+
+[node name="Wheat" type="Area2D" parent="."]
+position = Vector2(1096, 72)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Wheat"]
+shape = SubResource("RectangleShape2D_cb3jb")
+
 [connection signal="mouse_entered" from="Corn" to="." method="CornEnter"]
 [connection signal="mouse_exited" from="Corn" to="." method="CornExit"]
+[connection signal="mouse_entered" from="Carrot" to="." method="CarrotEnter"]
+[connection signal="mouse_exited" from="Carrot" to="." method="CarrotExit"]
