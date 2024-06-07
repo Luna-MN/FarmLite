@@ -1,14 +1,16 @@
-[gd_scene load_steps=5 format=3 uid="uid://ckvbu3jy2kdti"]
+[gd_scene load_steps=6 format=3 uid="uid://ckvbu3jy2kdti"]
 
 [ext_resource type="Script" path="res://Seeds.cs" id="1_oq0k6"]
 [ext_resource type="TileSet" uid="uid://caisq2bvgrfs7" path="res://Tiles.tres" id="1_wht38"]
 [ext_resource type="PackedScene" uid="uid://cfdsxevsk1b0h" path="res://Cornseed.tscn" id="2_8tty2"]
+[ext_resource type="PackedScene" uid="uid://cvx0oy04p3qjf" path="res://Carrotseed.tscn" id="3_58t0p"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_cb3jb"]
 
 [node name="CanvasLayer" type="CanvasLayer"]
 script = ExtResource("1_oq0k6")
 Cornseed = ExtResource("2_8tty2")
+Carrotseed = ExtResource("3_58t0p")
 
 [node name="TileMap" type="TileMap" parent="."]
 tile_set = ExtResource("1_wht38")
@@ -36,25 +38,25 @@ position = Vector2(1096, 72)
 shape = SubResource("RectangleShape2D_cb3jb")
 
 [node name="Cabbage" type="Area2D" parent="."]
-position = Vector2(1096, 72)
+position = Vector2(1096, 104)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Cabbage"]
 shape = SubResource("RectangleShape2D_cb3jb")
 
 [node name="Parsnip" type="Area2D" parent="."]
-position = Vector2(1096, 72)
+position = Vector2(1096, 152)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Parsnip"]
 shape = SubResource("RectangleShape2D_cb3jb")
 
 [node name="Cucumber" type="Area2D" parent="."]
-position = Vector2(1096, 72)
+position = Vector2(1096, 184)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Cucumber"]
 shape = SubResource("RectangleShape2D_cb3jb")
 
 [node name="Wheat" type="Area2D" parent="."]
-position = Vector2(1096, 72)
+position = Vector2(1096, 215)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Wheat"]
 shape = SubResource("RectangleShape2D_cb3jb")

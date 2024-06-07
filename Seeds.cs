@@ -5,8 +5,8 @@ public partial class Seeds : CanvasLayer
 {
 	bool Corn = false, Carrot = false, Cabbage = false, Parsnip = false, cucumber = false, wheat = false;
 	[Export]
-	public PackedScene Cornseed;
-	Cornseed made;
+	public PackedScene Cornseed, Carrotseed;
+	public Node2D made;
 
 	private void SetSeedStatus(ref bool seed, string seedName)
 	{
@@ -97,6 +97,8 @@ public partial class Seeds : CanvasLayer
 
 	private void DragCreate(InputEvent @event)
 	{
+
+
 		if (Corn)
 		{
 			if (@event is InputEventMouseButton mouseButton)
@@ -106,16 +108,31 @@ public partial class Seeds : CanvasLayer
 					GD.Print("Button pressed");
 					made = Cornseed.Instantiate<Cornseed>();
 					GetTree().Root.AddChild(made);
-					made.drag = true;
+					made.Set("drag", true); // Set the 'drag' property of the 'Node2D' instance
 				}
 			}
 		}
+		else if (Carrot)
+		{
+			if (@event is InputEventMouseButton mouseButton)
+			{
+				if (mouseButton.ButtonIndex == MouseButton.Left && mouseButton.Pressed)
+				{
+					GD.Print("Button pressed");
+					made = Carrotseed.Instantiate<Carrotseed>();
+					made = (Carrotseed)made;
+					GetTree().Root.AddChild(made);
+					made.Set("drag", true); // Set the 'drag' property of the 'Node2D' instance
+				}
+			}
+		}
+		// Add similar code blocks for other seed types
 
 		if (@event is InputEventMouseButton mouseButtonn)
 		{
 			if (mouseButtonn.ButtonIndex == MouseButton.Left && !mouseButtonn.Pressed)
 			{
-				made.drag = false;
+				made.Set("drag", false); // Set the 'drag' property of the 'Node2D' instance
 			}
 		}
 	}
