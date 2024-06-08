@@ -5,7 +5,7 @@ public partial class Seeds : CanvasLayer
 {
 	bool Corn = false, Carrot = false, Cabbage = false, Parsnip = false, cucumber = false, wheat = false;
 	[Export]
-	public PackedScene Cornseed, Carrotseed;
+	public PackedScene Cornseed, Carrotseed, Cabbageseed, Parsnipseed, Cucumberseed, Wheatseed;
 	public Node2D made;
 
 	private void SetSeedStatus(ref bool seed, string seedName)
@@ -121,6 +121,62 @@ public partial class Seeds : CanvasLayer
 					GD.Print("Button pressed");
 					made = Carrotseed.Instantiate<Carrotseed>();
 					made = (Carrotseed)made;
+					GetTree().Root.AddChild(made);
+					made.Set("drag", true); // Set the 'drag' property of the 'Node2D' instance
+				}
+			}
+		}
+		else if (Cabbage)
+		{
+			if (@event is InputEventMouseButton mouseButton)
+			{
+				if (mouseButton.ButtonIndex == MouseButton.Left && mouseButton.Pressed)
+				{
+					GD.Print("Button pressed");
+					made = Cabbageseed.Instantiate<Cabbageseed>();
+					made = (Cabbageseed)made;
+					GetTree().Root.AddChild(made);
+					made.Set("drag", true); // Set the 'drag' property of the 'Node2D' instance
+				}
+			}
+		}
+		else if (Parsnip)
+		{
+			if (@event is InputEventMouseButton mouseButton)
+			{
+				if (mouseButton.ButtonIndex == MouseButton.Left && mouseButton.Pressed)
+				{
+					GD.Print("Button pressed");
+					made = Parsnipseed.Instantiate<Parsnipseed>();
+					made = (Parsnipseed)made;
+					GetTree().Root.AddChild(made);
+					made.Set("drag", true); // Set the 'drag' property of the 'Node2D' instance
+				}
+			}
+		}
+		else if (cucumber)
+		{
+			if (@event is InputEventMouseButton mouseButton)
+			{
+				if (mouseButton.ButtonIndex == MouseButton.Left && mouseButton.Pressed)
+				{
+					GD.Print("Button pressed");
+					made = Cucumberseed.Instantiate<Cucumberseed>();
+					made = (Cucumberseed)made;
+					GetTree().Root.AddChild(made);
+					made.Set("drag", true); // Set the 'drag' property of the 'Node2D' instance
+				}
+			}
+		}
+		else if (wheat)
+		{
+			if (@event is InputEventMouseButton mouseButton)
+			{
+				if (mouseButton.ButtonIndex == MouseButton.Left && mouseButton.Pressed)
+				{
+					GD.Print("Button pressed");
+					made = Wheatseed.Instantiate<Wheatseed>();
+					made = (Wheatseed)made;
 					GetTree().Root.AddChild(made);
 					made.Set("drag", true); // Set the 'drag' property of the 'Node2D' instance
 				}
