@@ -147,8 +147,8 @@ public partial class Seeds : CanvasLayer
 				if (mouseButton.ButtonIndex == MouseButton.Left && mouseButton.Pressed)
 				{
 					GD.Print("Button pressed");
-					made = Parsnipseed.Instantiate<Parsnipseed>();
-					made = (Parsnipseed)made;
+					made = Parsnipseed.Instantiate<Parsnipseeds>();
+					made = (Parsnipseeds)made;
 					GetTree().Root.AddChild(made);
 					made.Set("drag", true); // Set the 'drag' property of the 'Node2D' instance
 				}

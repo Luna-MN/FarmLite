@@ -1,14 +1,24 @@
-[gd_scene load_steps=5 format=3 uid="uid://ckvbu3jy2kdti"]
+[gd_scene load_steps=10 format=3 uid="uid://ckvbu3jy2kdti"]
 
 [ext_resource type="Script" path="res://Seeds.cs" id="1_oq0k6"]
 [ext_resource type="TileSet" uid="uid://caisq2bvgrfs7" path="res://Tiles.tres" id="1_wht38"]
 [ext_resource type="PackedScene" uid="uid://cfdsxevsk1b0h" path="res://Cornseed.tscn" id="2_8tty2"]
+[ext_resource type="PackedScene" uid="uid://cvx0oy04p3qjf" path="res://Carrotseed.tscn" id="3_58t0p"]
+[ext_resource type="PackedScene" uid="uid://bk7uqspfkk367" path="res://Cabbageseed.tscn" id="4_hly8k"]
+[ext_resource type="PackedScene" uid="uid://l3jeef6kgnvu" path="res://Parsnipseeds.tscn" id="5_7qqqk"]
+[ext_resource type="PackedScene" uid="uid://dybl3ebenck8r" path="res://Cucumberseed.tscn" id="6_altok"]
+[ext_resource type="PackedScene" uid="uid://cnweptpysdx17" path="res://Wheatseed.tscn" id="7_6cmod"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_cb3jb"]
 
 [node name="CanvasLayer" type="CanvasLayer"]
 script = ExtResource("1_oq0k6")
 Cornseed = ExtResource("2_8tty2")
+Carrotseed = ExtResource("3_58t0p")
+Cabbageseed = ExtResource("4_hly8k")
+Parsnipseed = ExtResource("5_7qqqk")
+Cucumberseed = ExtResource("6_altok")
+Wheatseed = ExtResource("7_6cmod")
 
 [node name="TileMap" type="TileMap" parent="."]
 tile_set = ExtResource("1_wht38")
