@@ -1,16 +1,14 @@
-[gd_scene load_steps=6 format=3 uid="uid://ckvbu3jy2kdti"]
+[gd_scene load_steps=5 format=3 uid="uid://ckvbu3jy2kdti"]
 
 [ext_resource type="Script" path="res://Seeds.cs" id="1_oq0k6"]
 [ext_resource type="TileSet" uid="uid://caisq2bvgrfs7" path="res://Tiles.tres" id="1_wht38"]
 [ext_resource type="PackedScene" uid="uid://cfdsxevsk1b0h" path="res://Cornseed.tscn" id="2_8tty2"]
-[ext_resource type="PackedScene" uid="uid://cvx0oy04p3qjf" path="res://Carrotseed.tscn" id="3_58t0p"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_cb3jb"]
 
 [node name="CanvasLayer" type="CanvasLayer"]
 script = ExtResource("1_oq0k6")
 Cornseed = ExtResource("2_8tty2")
-Carrotseed = ExtResource("3_58t0p")
 
 [node name="TileMap" type="TileMap" parent="."]
 tile_set = ExtResource("1_wht38")
@@ -65,3 +63,11 @@ shape = SubResource("RectangleShape2D_cb3jb")
 [connection signal="mouse_exited" from="Corn" to="." method="CornExit"]
 [connection signal="mouse_entered" from="Carrot" to="." method="CarrotEnter"]
 [connection signal="mouse_exited" from="Carrot" to="." method="CarrotExit"]
+[connection signal="mouse_entered" from="Cabbage" to="." method="CabbageEnter"]
+[connection signal="mouse_exited" from="Cabbage" to="." method="CabbageExit"]
+[connection signal="mouse_entered" from="Parsnip" to="." method="ParsnipEnter"]
+[connection signal="mouse_exited" from="Parsnip" to="." method="ParsnipExit"]
+[connection signal="mouse_entered" from="Cucumber" to="." method="CucumberEnter"]
+[connection signal="mouse_exited" from="Cucumber" to="." method="CucumberExit"]
+[connection signal="mouse_entered" from="Wheat" to="." method="WheatEnter"]
+[connection signal="mouse_exited" from="Wheat" to="." method="WheatExit"]
