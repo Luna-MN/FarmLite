@@ -6,12 +6,15 @@ public partial class Seeds : CanvasLayer
 	bool Corn = false, Carrot = false, Cabbage = false, Parsnip = false, cucumber = false, wheat = false;
 	[Export]
 	public PackedScene Cornseed, Carrotseed, Cabbageseed, Parsnipseed, Cucumberseed, Wheatseed;
+	[Export]
+	public Farm farm;
 	public Node2D made;
 
 	private void SetSeedStatus(ref bool seed, string seedName)
 	{
 		seed = true;
 		GD.Print(seedName);
+		farm.seed = true;
 	}
 
 	private void ResetSeedStatus(ref bool seed)
