@@ -5,6 +5,7 @@ public partial class Farm : Node2D
 {
 	public bool seed = false, water = false, drag = false;
 	[Export]
+	public PackedScene plantedcarrot, plantedcorn, plantedcabbage, plantedparsnip, plantedcucumber, plantedwheat;
 	public PackedScene seedplanted;
 	public enum SeedType
 	{
