@@ -4,6 +4,8 @@ using System;
 public partial class Farm : Node2D
 {
 	public bool seed = false, water = false, drag = false;
+	[Export]
+	public PackedScene seedplanted;
 	private void mouseEnter()
 	{
 		drag = true;
@@ -22,11 +24,16 @@ public partial class Farm : Node2D
 	{
 		if (drag)
 		{
-			Position = GetGlobalMousePosition();
+			if (seed)
+			{
+				Node2D made = seedplanted.Instantiate<Node2D>();
+				GetParent().AddChild(made);
+				made.Position = GetGlobalMousePosition();
+			}
 		}
 		if (!drag)
 		{
-			QueueFree();
+
 		}
 	}
 }
