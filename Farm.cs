@@ -37,14 +37,40 @@ public partial class Farm : Node2D
 		{
 			if (seed)
 			{
-				Node2D made = seedplanted.Instantiate<Node2D>();
-				GetParent().AddChild(made);
-				made.Position = GetGlobalMousePosition();
+				switch (seedType)
+				{
+					case SeedType.Corn:
+						seedplanted = plantedcorn;
+						break;
+					case SeedType.Carrot:
+						seedplanted = plantedcarrot;
+						break;
+					case SeedType.Cabbage:
+						seedplanted = plantedcabbage;
+						break;
+					case SeedType.Parsnip:
+						seedplanted = plantedparsnip;
+						break;
+					case SeedType.Cucumber:
+						seedplanted = plantedcucumber;
+						break;
+					case SeedType.Wheat:
+						seedplanted = plantedwheat;
+						break;
+					default:
+						seedplanted = null;
+						break;
+				}
 			}
 		}
 		if (!drag)
 		{
-
+			if (seed)
+			{
+				Node2D made = seedplanted.Instantiate<Node2D>();
+				GetParent().AddChild(made);
+				made.Position = GetGlobalMousePosition();
+			}
 		}
 	}
 }
