@@ -6,6 +6,16 @@ public partial class Farm : Node2D
 	public bool seed = false, water = false, drag = false;
 	[Export]
 	public PackedScene seedplanted;
+	public enum SeedType
+	{
+		Corn,
+		Carrot,
+		Cabbage,
+		Parsnip,
+		Cucumber,
+		Wheat
+	}
+	public SeedType seedType;
 	private void mouseEnter()
 	{
 		drag = true;

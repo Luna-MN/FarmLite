@@ -111,7 +111,8 @@ public partial class Seeds : CanvasLayer
 					GD.Print("Button pressed");
 					made = Cornseed.Instantiate<Cornseed>();
 					GetTree().Root.AddChild(made);
-					made.Set("drag", true); // Set the 'drag' property of the 'Node2D' instance
+					made.Set("drag", true);
+					farm.seedType = Farm.SeedType.Corn;
 				}
 			}
 		}
@@ -125,7 +126,8 @@ public partial class Seeds : CanvasLayer
 					made = Carrotseed.Instantiate<Carrotseed>();
 					made = (Carrotseed)made;
 					GetTree().Root.AddChild(made);
-					made.Set("drag", true); // Set the 'drag' property of the 'Node2D' instance
+					made.Set("drag", true);
+					farm.seedType = Farm.SeedType.Carrot;
 				}
 			}
 		}
@@ -139,7 +141,8 @@ public partial class Seeds : CanvasLayer
 					made = Cabbageseed.Instantiate<Cabbageseed>();
 					made = (Cabbageseed)made;
 					GetTree().Root.AddChild(made);
-					made.Set("drag", true); // Set the 'drag' property of the 'Node2D' instance
+					made.Set("drag", true);
+					farm.seedType = Farm.SeedType.Cabbage;
 				}
 			}
 		}
@@ -153,7 +156,8 @@ public partial class Seeds : CanvasLayer
 					made = Parsnipseed.Instantiate<Parsnipseeds>();
 					made = (Parsnipseeds)made;
 					GetTree().Root.AddChild(made);
-					made.Set("drag", true); // Set the 'drag' property of the 'Node2D' instance
+					made.Set("drag", true);
+					farm.seedType = Farm.SeedType.Parsnip;
 				}
 			}
 		}
@@ -167,7 +171,8 @@ public partial class Seeds : CanvasLayer
 					made = Cucumberseed.Instantiate<Cucumberseed>();
 					made = (Cucumberseed)made;
 					GetTree().Root.AddChild(made);
-					made.Set("drag", true); // Set the 'drag' property of the 'Node2D' instance
+					made.Set("drag", true);
+					farm.seedType = Farm.SeedType.Cucumber;
 				}
 			}
 		}
@@ -181,17 +186,17 @@ public partial class Seeds : CanvasLayer
 					made = Wheatseed.Instantiate<Wheatseed>();
 					made = (Wheatseed)made;
 					GetTree().Root.AddChild(made);
-					made.Set("drag", true); // Set the 'drag' property of the 'Node2D' instance
+					made.Set("drag", true);
+					farm.seedType = Farm.SeedType.Wheat;
 				}
 			}
 		}
-		// Add similar code blocks for other seed types
 
 		if (@event is InputEventMouseButton mouseButtonn)
 		{
 			if (mouseButtonn.ButtonIndex == MouseButton.Left && !mouseButtonn.Pressed)
 			{
-				made.Set("drag", false); // Set the 'drag' property of the 'Node2D' instance
+				made.Set("drag", false);
 			}
 		}
 	}
