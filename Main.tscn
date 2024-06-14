@@ -31,7 +31,7 @@
 [ext_resource type="Texture2D" uid="uid://bks5ls2frr3qy" path="res://Sprout Lands - Sprites - premium pack/Objects/Farming Plants.png" id="30_4gt6y"]
 [ext_resource type="PackedScene" uid="uid://rq5f8plg6yfp" path="res://UI.tscn" id="30_hm723"]
 
-[node name="Node2D" type="Node2D"]
+[node name="Main" type="Node2D"]
 script = ExtResource("1_f6bb0")
 fenceScene = ExtResource("2_sgalq")
 

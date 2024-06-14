@@ -9,6 +9,7 @@ public partial class Seeds : CanvasLayer
 	[Export]
 	public Farm farm;
 	public Node2D made;
+	public Main main;
 
 	private void SetSeedStatus(ref bool seed, string seedName)
 	{
@@ -84,6 +85,7 @@ public partial class Seeds : CanvasLayer
 	// Called when the node enters the scene tree for the first time.
 	public override void _Ready()
 	{
+		main = GetNode<Main>("/root/Main");
 	}
 
 	// Called every frame. 'delta' is the elapsed time since the previous frame.
@@ -112,7 +114,11 @@ public partial class Seeds : CanvasLayer
 					made = Cornseed.Instantiate<Cornseed>();
 					GetTree().Root.AddChild(made);
 					made.Set("drag", true);
-					farm.seedType = Farm.SeedType.Corn;
+					foreach (Farm farm in main.farm)
+					{
+						farm.seedType = Farm.SeedType.Corn;
+					}
+
 				}
 			}
 		}
@@ -127,7 +133,10 @@ public partial class Seeds : CanvasLayer
 					made = (Carrotseed)made;
 					GetTree().Root.AddChild(made);
 					made.Set("drag", true);
-					farm.seedType = Farm.SeedType.Carrot;
+					foreach (Farm farm in main.farm)
+					{
+						farm.seedType = Farm.SeedType.Carrot;
+					}
 				}
 			}
 		}
@@ -142,7 +151,10 @@ public partial class Seeds : CanvasLayer
 					made = (Cabbageseed)made;
 					GetTree().Root.AddChild(made);
 					made.Set("drag", true);
-					farm.seedType = Farm.SeedType.Cabbage;
+					foreach (Farm farm in main.farm)
+					{
+						farm.seedType = Farm.SeedType.Cabbage;
+					}
 				}
 			}
 		}
@@ -157,7 +169,10 @@ public partial class Seeds : CanvasLayer
 					made = (Parsnipseeds)made;
 					GetTree().Root.AddChild(made);
 					made.Set("drag", true);
-					farm.seedType = Farm.SeedType.Parsnip;
+					foreach (Farm farm in main.farm)
+					{
+						farm.seedType = Farm.SeedType.Parsnip;
+					}
 				}
 			}
 		}
@@ -172,7 +187,10 @@ public partial class Seeds : CanvasLayer
 					made = (Cucumberseed)made;
 					GetTree().Root.AddChild(made);
 					made.Set("drag", true);
-					farm.seedType = Farm.SeedType.Cucumber;
+					foreach (Farm farm in main.farm)
+					{
+						farm.seedType = Farm.SeedType.Cucumber;
+					}
 				}
 			}
 		}
@@ -187,7 +205,10 @@ public partial class Seeds : CanvasLayer
 					made = (Wheatseed)made;
 					GetTree().Root.AddChild(made);
 					made.Set("drag", true);
-					farm.seedType = Farm.SeedType.Wheat;
+					foreach (Farm farm in main.farm)
+					{
+						farm.seedType = Farm.SeedType.Wheat;
+					}
 				}
 			}
 		}

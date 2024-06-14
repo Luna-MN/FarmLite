@@ -7,6 +7,7 @@ public partial class Farm : Node2D
 	[Export]
 	public PackedScene plantedcarrot, plantedcorn, plantedcabbage, plantedparsnip, plantedcucumber, plantedwheat;
 	public PackedScene seedplanted;
+	public Main main;
 	public enum SeedType
 	{
 		Corn,
@@ -28,6 +29,8 @@ public partial class Farm : Node2D
 	// Called when the node enters the scene tree for the first time.
 	public override void _Ready()
 	{
+		main = GetNode<Main>("/root/Main");
+		main.farm.Add(this);
 	}
 
 	// Called every frame. 'delta' is the elapsed time since the previous frame.

@@ -1,11 +1,13 @@
 using Godot;
 using System;
+using System.Collections.Generic;
 using System.Diagnostics;
 
 public partial class Main : Node2D
 {
 	[Export]
 	public PackedScene fenceScene;
+	public List<Node2D> farm = new List<Node2D>();
 
 	public void _on_button_pressed(Node2D tile)
 	{
