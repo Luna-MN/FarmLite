@@ -15,7 +15,10 @@ public partial class Seeds : CanvasLayer
 	{
 		seed = true;
 		GD.Print(seedName);
-		farm.seed = true;
+		foreach (Farm farm in main.farm)
+		{
+			farm.seed = true;
+		}
 	}
 
 	private void ResetSeedStatus(ref bool seed)

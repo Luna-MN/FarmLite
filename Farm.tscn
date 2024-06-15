@@ -1,15 +1,13 @@
-[gd_scene load_steps=5 format=3 uid="uid://bolhxti5prgm7"]
+[gd_scene load_steps=4 format=3 uid="uid://bolhxti5prgm7"]
 
 [ext_resource type="TileSet" uid="uid://caisq2bvgrfs7" path="res://Tiles.tres" id="1_hg1ql"]
 [ext_resource type="Script" path="res://Farm.cs" id="1_iybsx"]
-[ext_resource type="PackedScene" uid="uid://c3f81svisf0af" path="res://cornPlanted.tscn" id="2_y4qx4"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_kbhk8"]
 size = Vector2(138.5, 107.5)
 
 [node name="Node2D" type="Node2D"]
 script = ExtResource("1_iybsx")
-plantedcorn = ExtResource("2_y4qx4")
 
 [node name="TileMap" type="TileMap" parent="."]
 tile_set = ExtResource("1_hg1ql")
