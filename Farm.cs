@@ -68,10 +68,10 @@ public partial class Farm : Node2D
 		}
 		if (!drag)
 		{
-			if (seed)
+			if (seed && seedplanted != null)
 			{
 				Node2D made = seedplanted.Instantiate<Node2D>();
-				GetParent().AddChild(made);
+				GetTree().Root.AddChild(made);
 				made.Position = GetGlobalMousePosition();
 			}
 		}
