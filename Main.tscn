@@ -1,4 +1,4 @@
-[gd_scene load_steps=31 format=3 uid="uid://b6jqxlout6a7p"]
+[gd_scene load_steps=30 format=3 uid="uid://b6jqxlout6a7p"]
 
 [ext_resource type="Script" path="res://Main.cs" id="1_f6bb0"]
 [ext_resource type="TileSet" uid="uid://caisq2bvgrfs7" path="res://Tiles.tres" id="1_qux4g"]
@@ -6,7 +6,6 @@
 [ext_resource type="Script" path="res://b.cs" id="4_chypx"]
 [ext_resource type="Texture2D" uid="uid://b8q652kfvb2ml" path="res://Sprout Lands - Sprites - premium pack/Objects/Mushrooms, Flowers, Stones.png" id="5_u7vi4"]
 [ext_resource type="Texture2D" uid="uid://bfc7gpm2ykxjo" path="res://Sprout Lands - Sprites - premium pack/Objects/Water Objects.png" id="6_6aln6"]
-[ext_resource type="Texture2D" uid="uid://ngpchf7ruvrx" path="res://Sprout Lands - Sprites - premium pack/Objects/Items/Farming Plants items.png" id="7_tvnid"]
 [ext_resource type="Texture2D" uid="uid://bx4nbrbekcps7" path="res://Sprout Lands - Sprites - premium pack/Objects/Items/fruit and berries items.png" id="8_bmm3d"]
 [ext_resource type="Texture2D" uid="uid://cn235wlue5xel" path="res://Sprout Lands - Sprites - premium pack/Objects/Items/All items.png" id="9_t7ofl"]
 [ext_resource type="Texture2D" uid="uid://bsab8xiars6tx" path="res://Sprout Lands - Sprites - premium pack/Characters/Premium Charakter Spritesheet.png" id="10_tgeeo"]
@@ -297,23 +296,19 @@ main = NodePath("../..")
 metadata/_edit_use_anchors_ = true
 
 [node name="Mushrooms,Flowers,Stones" type="Sprite2D" parent="."]
-position = Vector2(-638, -303)
+position = Vector2(-1560, -421)
 texture = ExtResource("5_u7vi4")
 
 [node name="WaterObjects" type="Sprite2D" parent="."]
-position = Vector2(-738, 67)
+position = Vector2(-1185, 1)
 texture = ExtResource("6_6aln6")
 
-[node name="FarmingPlantsItems" type="Sprite2D" parent="."]
-position = Vector2(-753, -249)
-texture = ExtResource("7_tvnid")
-
 [node name="FruitAndBerriesItems" type="Sprite2D" parent="."]
-position = Vector2(-1021, -33)
+position = Vector2(-1624, -310)
 texture = ExtResource("8_bmm3d")
 
 [node name="AllItems" type="Sprite2D" parent="."]
-position = Vector2(-1111, 137)
+position = Vector2(-1802, -321)
 texture = ExtResource("9_t7ofl")
 
 [node name="PremiumCharakterSpritesheet" type="Sprite2D" parent="."]
@@ -321,19 +316,15 @@ position = Vector2(-1012, 1188)
 texture = ExtResource("10_tgeeo")
 
 [node name="Trees,StumpsAndBushes" type="Sprite2D" parent="."]
-position = Vector2(-1031, 373)
+position = Vector2(-1666, -61)
 texture = ExtResource("11_qg5gu")
 
-[node name="WaterObjects2" type="Sprite2D" parent="."]
-position = Vector2(-862, 269)
-texture = ExtResource("6_6aln6")
-
 [node name="WaterWell" type="Sprite2D" parent="."]
-position = Vector2(-774, 364)
+position = Vector2(-1160, -534)
 texture = ExtResource("12_vsvye")
 
 [node name="WorkStation" type="Sprite2D" parent="."]
-position = Vector2(-690, 329)
+position = Vector2(-1076, -569)
 texture = ExtResource("13_ew168")
 
 [node name="AllUiAssetsOnOneSheet" type="Sprite2D" parent="."]
@@ -341,11 +332,11 @@ position = Vector2(-2221, 368)
 texture = ExtResource("14_775x1")
 
 [node name="EggItems" type="Sprite2D" parent="."]
-position = Vector2(-1278, 448)
+position = Vector2(-1725, 382)
 texture = ExtResource("15_oc35v")
 
 [node name="WaterObjects3" type="Sprite2D" parent="."]
-position = Vector2(-936, 504)
+position = Vector2(-1322, -394)
 texture = ExtResource("6_6aln6")
 
 [node name="WaterFromWateringcanFrames" type="Sprite2D" parent="."]
